@@ -1,0 +1,29 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:17'
+}
+
+javafx {
+    version = "17"
+    modules = [ 'javafx.controls' ]
+}
+
+application {
+    mainClass = 'ParkingLotAppFX'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'ParkingLotAppFX'
+        )
+    }
+}
